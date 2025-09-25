@@ -1,13 +1,15 @@
+/* global styles */
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
+/* header */
 header {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #e49e58;
@@ -15,8 +17,8 @@ header {
 }
 
 header > h1 {
-    padding: 5px;
     font-size: 3em;
+    padding: 5px;
 }
 
 header > nav {
@@ -25,56 +27,115 @@ header > nav {
 }
 
 header > nav > a {
-    margin: 0px 15px;
-    padding: 5px 15px;
-    border-radius: 7px;
-    font-size: 1.2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 900;
     background-color: #F5EBDD;
     text-decoration: none;
+    border-radius: 7px;
+    padding: 5px 15px;
+    margin: 0px 15px;
+    font-size: 1.2em;
+    font-weight: 900;
     color: #1d1d1d;
 }
 
-div.img-div {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+/* initial section */
+section.initial-section {
     background-image: url('assets/main-background-coffee-shop.png');
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
-main > div.img-div > div.space > h2 {
-    color: #ffeed9;
-    text-shadow: 1px 1px 1px black;
-    font-size: 4.8em;
+main > section.initial-section::before {
+    pointer-events: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    left: 0;
+    top: 0;
 }
 
-main > div.img-div > div.space > button {
+main > section.initial-section > a > button.see-more {
+    border: 3px dashed #945c19;
     background-color: #ffe0b9;
-    margin: 18em 0em 0em 5em;
+    margin: 10em 0em 0em 9.8em;
     border-radius: 9px;
     padding: 12px 21px;
-    color: #482f10;
+    color: #6f4513;
     font-size: 1.4em;
     font-weight: 800;
-    border: 3px dashed #8d5007;
 }
 
-main > div.img-div > div.space {
+/* space */
+main > section.initial-section > div.space > h2 {
+    text-shadow: 1px 1px 1px black;
+    font-size: 4.8em;
+    color: #ffcc8d;
+}
+
+main > section.initial-section > div.space {
     padding: 2em 0em 0em 0em;
     margin: 0em 8em;
 }
 
-div.img-div::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0000003f;
-    pointer-events: none;
+main > section.initial-section > div.space > p {
+    text-shadow: 0.5px 0.5px 0px #000000;
+    font-size: 1.5em;
+    color: #ffecd6;
+}
+
+/* space2 */
+main > section.initial-section > div.space2 {
+    margin: 6em 0em 0em 50em;
+    padding: 5px;
+}
+
+main > section.initial-section > div.space2 > h2 {
+    text-shadow: 1px 1px 1px black;
+    font-size: 4.8em;
+    color: #ffcc8d;
+}
+
+main > section.initial-section > div.space2 > p {
+    text-shadow: 0.5px 0.5px 0px #000000;
+    font-size: 1.5em;
+    color: #ffecd6;
+}
+
+
+/* second section */
+main > section.second-section {
+    background: linear-gradient(0deg, #f2c389, #d09a58);
+    height: 100vh;
+}
+
+
+/* footer */
+footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #1b1b1b;
+    color: #ababab;
+    font-size: 1.2em;
+    height: 25em;
+    columns: 4;
+}
+
+footer > div {
+    display: inline-block;
+    margin: 1em 15em;
+    padding: 1em;
+}
+
+footer > div > h3 {
+    color: aliceblue;
+    font-size: 2em;
+}
+
+footer > div p > a {
+    color: rgb(209, 125, 36);
+    text-decoration: none;
 }
